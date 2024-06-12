@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+   char codigo; //define as váriaveis e o tipo.
+   int qtd;
+   float aPagar;
+    printf("Digite o código:");
+    scanf(" %c", &codigo);
+    printf("Digite a Qtd vendida:");
+    scanf("%d",&qtd);
+    
+    if(codigo == 'A' || codigo == 'a'){
+        aPagar = qtd*10;
+        
+    }
+    else if(codigo == 'B' || codigo == 'b'){
+        aPagar = qtd*20;
+       
+        
+    }else if(codigo == 'C' || codigo == 'c'){
+        aPagar = qtd*30;
+        
+    }else{
+        aPagar = 0;
+        printf("Código Errado");
+    }
+    if (aPagar > 0) { 
+        printf("Valor pago será %.2f",aPagar);
+        if (qtd > 10){
+            printf("\nForam vendidas mais de 10 unidade");
+        }
+    }
+   
+}
