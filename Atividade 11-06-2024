@@ -4,30 +4,30 @@ int main()
    char codigo; //define as váriaveis e o tipo.
    int qtd;
    float aPagar;
-    printf("Digite o código:");
+    printf("Digite o código (A,B ou C):"); // pede o código do produto
     scanf(" %c", &codigo);
-    printf("Digite a Qtd vendida:");
-    scanf("%d",&qtd);
+    printf("Digite a Qtd vendida:"); //pede a quantidade que foi vendida
+    scanf("%d",&qtd); // ler e guarda na variavel o valor da quantidade
     
-    if(codigo == 'A' || codigo == 'a'){
-        aPagar = qtd*10;
+    if(codigo == 'A' || codigo == 'a'){  // verifica se o código que foi digitado é equivalente a letra a ou A
+        aPagar = qtd*10;                //calcula a quantidade que será cobrada
         
     }
-    else if(codigo == 'B' || codigo == 'b'){
-        aPagar = qtd*20;
+    else if(codigo == 'B' || codigo == 'b'){// verifica se o código que foi digitado é equivalente a letra b ou B
+        aPagar = qtd*20;                      //calcula a quantidade que será cobrada
        
         
-    }else if(codigo == 'C' || codigo == 'c'){
-        aPagar = qtd*30;
+    }else if(codigo == 'C' || codigo == 'c'){// verifica se o código que foi digitado é equivalente a letra c ou C
+        aPagar = qtd*30;                              //calcula a quantidade que será cobrada
         
     }else{
         aPagar = 0;
-        printf("Código Errado");
+        printf("Código Errado");            // caso o código seja digitado diferente do proposto, retorna a mensagem de código errado e o valor a pagar não é acrescido
     }
-    if (aPagar > 0) { 
-        printf("Valor pago será %.2f",aPagar);
-        if (qtd > 10){
-            printf("\nForam vendidas mais de 10 unidade");
+    if (aPagar > 0) {                               //verifica se o valor a pagar foi alterado para maior que zero
+        printf("Valor pago será %.2f",aPagar);      //exibe a mensagem com o valor a ser pago, de acordo com o código e a quantidade vendida
+        if (qtd > 10){                                      //verifica se a quantidade é superior a 10 unidades
+            printf("\nForam vendidas mais de 10 unidade");  // retorna essa mensagem caso seja superior a 10 unidades
         }
     }
    
